@@ -38,9 +38,9 @@ const Nav = () =>{
 export default Nav;
 */
 
-
 import React from "react";
 
+/*
 function Nav() {
   return (
     <>
@@ -77,7 +77,7 @@ function Nav() {
               </a>
             </li>
             <li className="nav-item">
-              {/* If the link is disabled, use aria-disabled */}
+              {/* If the link is disabled, use aria-disabled 
               <a
                 className="nav-link"
                 href="/"
@@ -93,5 +93,68 @@ function Nav() {
     </>
   );
 }
+
+export default Nav;
+*/
+
+//Component Rendering
+
+// Nav Component
+const Nav = () => {
+  /*
+  // let isLogin = true;
+  let isLogin = false;
+
+  if (isLogin) {
+    return <Profile />;
+  } else {
+    return <Navbar />;
+  }
+    */
+
+  //Using Ternary operator
+  let isLogin = true;
+  return <>{isLogin ? <Navbar /> : <Profile />}</>;
+};
+
+// Navbar Component
+const Navbar = () => {
+  return (
+    <>
+      <nav style={{ padding: "10px", backgroundColor: "#333", color: "#fff" }}>
+        <ul style={{ listStyleType: "none", display: "flex" }}>
+          <li style={{ margin: "0 15px" }}>
+            <a href="/" style={{ color: "#fff", textDecoration: "none" }}>
+              Home
+            </a>
+          </li>
+          <li style={{ margin: "0 15px" }}>
+            <a href="/about" style={{ color: "#fff", textDecoration: "none" }}>
+              About
+            </a>
+          </li>
+          <li style={{ margin: "0 15px" }}>
+            <a
+              href="/contact"
+              style={{ color: "#fff", textDecoration: "none" }}
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </>
+  );
+};
+
+// Profile Component
+const Profile = () => {
+  return (
+    <>
+      <h2>Hello, Everyone!</h2>
+      <button>Logout</button>
+    </>
+  );
+};
 
 export default Nav;

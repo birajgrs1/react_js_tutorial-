@@ -1,25 +1,29 @@
-
-
-
 // This is child component
 
-const Product = (props) =>{
-    // console.log(props.productDetails);
-    return(
-        <div>
-             {/* <h5>Product: {props.title}</h5>
-            <p>Price: {props.price}</p>  */}
+const Product = () => {
+  // console.log(props.productDetails);
+  const demoFunction = () =>{
+    // console.log("Button Clicked!!!");
+    alert("Button Clicked!!!");
+  }
 
-            <h5>Product: {props.title}</h5>
-            <span>Price: {props.price}</span>
-            {props.children}
-             
-{/* 
+ 
+  return (
+    <div>
+      {/* <h5>Product: {props.title}</h5>
+      <p>Price: {props.price}</p>
+      {props.children} */}
+
+      {/* 
             <h5>Product: {props.productDetails.title}</h5>
             <p>Price: {props.productDetails.price}</p>
             <p>Brand: {props.productDetails.brand}</p> */}
-        </div>
-    );
-}
+
+      {/* Event Handling in React js  */}
+      <h2>This is a product component.</h2>
+      <button onClick={demoFunction}>Click Me</button>
+    </div>
+  );
+};
 
 export default Product;
