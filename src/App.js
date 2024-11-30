@@ -5,6 +5,7 @@ import "./App.css";
 import Product from "./Component/Product";
 // import EventHandler from "./Component/EventHandler";
 import Nav from "./Component/Nav";
+import ListItems from "./Component/ListItems";
 
 // function App() {
 //   return (
@@ -93,10 +94,14 @@ function App() {
 
       {/* Event handling */}
       {/* <EventHandler /> */}
+      
 
       <Nav />
       {/* Using conditional rendering ---> 'logical operator' */}
       {isChosen && <Product />}
+
+      <ListItems/>
+      
     </>
   );
 }
