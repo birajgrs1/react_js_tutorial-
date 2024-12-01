@@ -1,44 +1,6 @@
-/*
-function Nav(){
-    return(
-        <div>
-        <h2>This is NavBar.</h2>
-        </div>
-    );
-}
-
-export default Nav;
-
-
-// using Arrow function
-
-
-const Nav = () =>{
-
-    //Inline CSS
-    const myStyle = {
-        backgroundColor: 'pink',
-        color: 'white'
-    }
-    const myAnotherStyle= {
-        backgroundColor: 'purple',
-        color: 'white'
-    }
-        
-
-    
-        return(
-        <div>
-        { <h2 style={myStyle}>This is NavBar.</h2>
-        <p style={myAnotherStyle}>Hello, All from Navigation bar.</p> }
-        <h2>This is Navbar.</h2>
-        </div>
-    );
-}
-export default Nav;
-*/
-
 import React from "react";
+
+import { Link } from "react-router-dom";
 
 /*
 function Nav() {
@@ -113,48 +75,58 @@ const Nav = () => {
     */
 
   //Using Ternary operator
-  let isLogin = true;
-  return <>{isLogin ? <Navbar /> : <Profile />}</>;
-};
+  // let isLogin = true;
+  // return <>{isLogin ? <Navbar /> : <Profile />}</>;
 
-// Navbar Component
-const Navbar = () => {
   return (
     <>
-      <nav style={{ padding: "10px", backgroundColor: "#333", color: "#fff" }}>
-        <ul style={{ listStyleType: "none", display: "flex" }}>
-          <li style={{ margin: "0 15px" }}>
-            <a href="/" style={{ color: "#fff", textDecoration: "none" }}>
-              Home
-            </a>
-          </li>
-          <li style={{ margin: "0 15px" }}>
-            <a href="/about" style={{ color: "#fff", textDecoration: "none" }}>
-              About
-            </a>
-          </li>
-          <li style={{ margin: "0 15px" }}>
-            <a
-              href="/contact"
-              style={{ color: "#fff", textDecoration: "none" }}
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+      {/* <a href="/home">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a> */}
+      <Link to="/home">Home</Link>
+      <Link to="/about">About</Link>
+      <Link to="/contact">Contact</Link>
     </>
   );
 };
-
-// Profile Component
-const Profile = () => {
-  return (
-    <>
-      <h2>Hello, Everyone!</h2>
-      <button>Logout</button>
-    </>
-  );
-};
-
 export default Nav;
+
+// // Navbar Component
+// const Navbar = () => {
+//   return (
+//     <>
+//       <nav style={{ padding: "10px", backgroundColor: "#333", color: "#fff" }}>
+//         <ul style={{ listStyleType: "none", display: "flex" }}>
+//           <li style={{ margin: "0 15px" }}>
+//             <a href="/" style={{ color: "#fff", textDecoration: "none" }}>
+//               Home
+//             </a>
+//           </li>
+//           <li style={{ margin: "0 15px" }}>
+//             <a href="/about" style={{ color: "#fff", textDecoration: "none" }}>
+//               About
+//             </a>
+//           </li>
+//           <li style={{ margin: "0 15px" }}>
+//             <a
+//               href="/contact"
+//               style={{ color: "#fff", textDecoration: "none" }}
+//             >
+//               Contact
+//             </a>
+//           </li>
+//         </ul>
+//       </nav>
+//     </>
+//   );
+// };
+
+// // Profile Component
+// const Profile = () => {
+//   return (
+//     <>
+//       <h2>Hello, Everyone!</h2>
+//       <button>Logout</button>
+//     </>
+//   );
+// };

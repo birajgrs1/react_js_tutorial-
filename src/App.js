@@ -1,11 +1,15 @@
 // import logo from "./logo.svg";
-import "./App.css";
 // import DemoClassComponent from "./Component/DemoClassComponent";
 // import Header from "./Component/Header";
-import Product from "./Component/Product";
+// import Product from "./Component/Product";
 // import EventHandler from "./Component/EventHandler";
 import Nav from "./Component/Nav";
-import ListItems from "./Component/ListItems";
+// import ListItems from "./Component/ListItems";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Component/Home";
+import About from "./Component/About";
+import Contact from "./Component/Contact";
+
 
 // function App() {
 //   return (
@@ -35,7 +39,7 @@ import ListItems from "./Component/ListItems";
 // export default App;
 
 /*
-Functional Component in reactjs
+//Functional Component in reactjs
 
 function sayHello() {
   return (
@@ -46,7 +50,7 @@ function sayHello() {
   );
 }
 export default sayHello;
- */
+*/
 
 function App() {
   /*
@@ -58,7 +62,7 @@ function App() {
   }
   */
 
-  let isChosen = true;
+  // let isChosen = true;
 
   return (
     <>
@@ -96,12 +100,22 @@ function App() {
       {/* <EventHandler /> */}
       
 
+     
+      <Router>
       <Nav />
-      {/* Using conditional rendering ---> 'logical operator' */}
+        <Routes>
+          <Route path="/home" element={<Home/>}>Home</Route>
+          <Route path="/about" element={<About/>}>About</Route>
+          <Route path="/contact" element={<Contact/>}>Contact</Route>
+        </Routes>
+        <p>&copy; 2024 <b>Biraj Grs| React Tutorial.</b> All rights reserved.</p>
+
+      </Router>
+      {/* Using conditional rendering ---> 'logical operator'
       {isChosen && <Product />}
 
       <ListItems/>
-      
+       */}
     </>
   );
 }
