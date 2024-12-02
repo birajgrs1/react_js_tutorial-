@@ -3,12 +3,13 @@
 // import Header from "./Component/Header";
 // import Product from "./Component/Product";
 // import EventHandler from "./Component/EventHandler";
-import Nav from "./Component/Nav";
+// import Nav from "./Component/Nav";
 // import ListItems from "./Component/ListItems";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Component/Home";
-import About from "./Component/About";
-import Contact from "./Component/Contact";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Home from "./Component/Home";
+// import About from "./Component/About";
+// import Contact from "./Component/Contact";
+import HooksExamples from "./Component/HooksExamples";
 
 
 // function App() {
@@ -100,7 +101,7 @@ function App() {
       {/* <EventHandler /> */}
       
 
-     
+    {/*  
       <Router>
       <Nav />
         <Routes>
@@ -111,11 +112,20 @@ function App() {
         <p>&copy; 2024 <b>Biraj Grs| React Tutorial.</b> All rights reserved.</p>
 
       </Router>
+      */}
       {/* Using conditional rendering ---> 'logical operator'
       {isChosen && <Product />}
 
       <ListItems/>
        */}
+
+       {/* Hooks in React */}
+       <HooksExamples/>
+
+       {/* See fetched datas */}
+       {/* <Product/> */}
+
+
     </>
   );
 }
